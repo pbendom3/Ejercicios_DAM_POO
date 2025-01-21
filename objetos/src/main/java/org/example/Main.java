@@ -7,18 +7,14 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
 
-        Persona persona1 = new Persona("Pepe", "Sánchez", "12345678A", 80, 30);
-        Persona persona2 = new Persona();
+       Paciente paciente_fit = new Paciente("Llados",40,'M', 130.10F, 1.70F);
+       paciente_fit.mostrarInfoPaciente();
+       Paciente paciente1 = new Paciente();
+       paciente1.mostrarInfoPaciente();
+       Paciente paciente2 =  new Paciente("Boix",18,'H');
+       paciente2.mostrarInfoPaciente();
 
-        persona1.imprimirInfoPersona();
-        persona2.imprimirInfoPersona();
-        System.out.println(persona1.concatenar());
 
-        System.out.println("Antes:" + persona1.getNombre());
-        persona1.setNombre("Pepa");
-        System.out.println("Después:" + persona1.getNombre());
-        persona1.setNombre("messi");
-        System.out.println("Madrit:" + persona1.getNombre());
 
     }
 }
