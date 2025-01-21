@@ -6,12 +6,19 @@ public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Persona persona1 = new Persona("Pepe", "Sánchez", "12345678A", 80, 30);
+        Persona persona2 = new Persona();
+
+        persona1.imprimirInfoPersona();
+        persona2.imprimirInfoPersona();
+        System.out.println(persona1.concatenar());
+
+        System.out.println("Antes:" + persona1.getNombre());
+        persona1.setNombre("Pepa");
+        System.out.println("Después:" + persona1.getNombre());
+        persona1.setNombre("messi");
+        System.out.println("Madrit:" + persona1.getNombre());
+
     }
 }
