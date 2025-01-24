@@ -3,6 +3,7 @@ package org.example;
 public class Estudiante {
 
     public static int contadorEstudiantes = 0;
+    public static final String FORMATO_CORREO = "^[A-Za-z0-9+_.-]+@alu.edu.gva.es$";
 
     private String nombre;
     private String curso;
@@ -12,7 +13,7 @@ public class Estudiante {
     public Estudiante(String nombre){
         this.nombre=nombre;
         contadorEstudiantes++;
-        this.nia=contadorEstudiantes;
+        nia=contadorEstudiantes;
     }
 
     public Estudiante (String nombre, String curso, String email){
@@ -21,24 +22,24 @@ public class Estudiante {
         this.curso=curso;
         this.email=email;
         contadorEstudiantes++;
-        this.nia=contadorEstudiantes;
+        nia=contadorEstudiantes;
 
     }
 
     public String getNombre(){
-        return this.nombre;
+        return nombre;
     }
 
     public String getCurso(){
-        return this.curso;
+        return curso;
     }
 
     public int getNia(){
-        return this.nia;
+        return nia;
     }
 
     public String getEmail(){
-        return this.email;
+        return email;
     }
 
     public void setNombre(String nombre){
@@ -55,11 +56,17 @@ public class Estudiante {
 
     @Override
     public String toString(){
-        return "Alumno: [nombre= " + this.nombre + " curso=" + this.curso + " nia=" + this.nia + " email= " + this.email + "]";
+        return "Alumno: [nombre= " + nombre + " curso=" + curso + " nia=" + nia + " email= " + email + "]";
     }
 
     public static int obtenerTotalEstudiantes(){
         return contadorEstudiantes;
+    }
+
+    public static boolean validarCorreo(String email){
+
+        return email.matches(FORMATO_CORREO) && email != null;
+
     }
 
 
