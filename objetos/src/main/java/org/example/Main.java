@@ -17,15 +17,23 @@ public class Main {
 //        System.out.println(Estudiante.contadorEstudiantes);
 //        System.out.println(Estudiante.obtenerTotalEstudiantes());
 
-        Libro libro1 = new Libro("La novia de Pol","Laura P.");
-        Libro libro2 = new Libro("La novia de Pol segunda saga","Laura P.");
+        Estudiante estudiante1 = new Estudiante("Manuel","2ºASIR","noseque@alu.edu.gva.es");
+        Editorial editorial = new Editorial("Freelance","España");
+        Libro libro1 = new Libro("La novia de Pol","Laura P.",editorial);
+        Libro libro2 = new Libro("La novia de Pol segunda saga","Laura P.",editorial);
         System.out.println(libro1);
         System.out.println(libro2);
-        libro1.prestar();
+        libro1.prestar(estudiante1);
+        System.out.println(libro1);
+        System.out.println(estudiante1);
+
         System.out.println(Libro.getLibrosDisponibles());
-        libro1.devolver();
+        libro1.devolver(estudiante1);
+        System.out.println(libro1);
+        System.out.println(estudiante1);
+
         System.out.println(Libro.getLibrosDisponibles());
-        libro1.devolver();
+        libro1.devolver(estudiante1);
 
 
     }
