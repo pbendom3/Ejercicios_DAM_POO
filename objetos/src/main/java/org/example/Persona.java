@@ -71,7 +71,18 @@ public class Persona {
     }
 
     public void imprimirInfoPersona(){
-        System.out.println(this.nombre + " " + this.apellido +" " + this.dni +" " + this.peso +" " + this.edad);
+        System.out.println(getNombre() + " " + getApellido() +" " + getDni() +" " + getPeso() +" " + getEdad());
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", dni='" + dni + '\'' +
+                ", peso=" + peso +
+                ", edad=" + edad +
+                '}';
     }
 
 
