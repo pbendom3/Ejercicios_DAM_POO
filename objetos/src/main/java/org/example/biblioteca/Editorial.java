@@ -1,6 +1,5 @@
-package org.example;
+package org.example.biblioteca;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Editorial {
