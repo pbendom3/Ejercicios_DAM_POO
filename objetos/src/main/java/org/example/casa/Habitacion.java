@@ -24,7 +24,7 @@ public class Habitacion {
 
     @Override
     public String toString() {
-        return "Habitación : [ nombre=" + getNombre() + " metros cuadrados=" + getMetrosCuadrados() + " ]";
+        return "Habitación : [ nombre=" + getNombre() + " metrosCuadrados=" + getMetrosCuadrados() + " ]";
     }
 
 }
