@@ -4,6 +4,7 @@ import org.example.biblioteca.Editorial;
 import org.example.biblioteca.Estudiante;
 import org.example.biblioteca.Libro;
 import org.example.biblioteca.Prestamo;
+import org.example.pruebas_lombok.Instituto;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -20,36 +21,17 @@ public class Main {
 //        System.out.println(Estudiante.contadorEstudiantes);
 //        System.out.println(Estudiante.obtenerTotalEstudiantes());
 
-        Estudiante estudiante1 = new Estudiante("Manuel","2ºASIR","noseque@alu.edu.gva.es");
+        Instituto ies_alluser = new Instituto("IES ALLUSER","MUTXAMEL","calle falsa 123");
+        System.out.println(ies_alluser.toString());
 
-        Editorial editorial = new Editorial("Freelance","España");
-        System.out.println(editorial);
-        Libro libro1 = new Libro("La novia de Pol","Laura P.",editorial);
-        System.out.println(editorial);
-        Libro libro2 = new Libro("La novia de Pol segunda saga","Laura P.",editorial);
-        System.out.println(editorial);
+        Instituto iesmutxamel = null;
+        try{
+            iesmutxamel = new Instituto(null,"mutxamel","hola ");
+        }catch (NullPointerException e){
+            System.out.println("El nombre no puede ser nulo");
+        }
 
-        System.out.println(libro1);
-        System.out.println(libro2);
-        Prestamo prestamo1 = libro1.prestar(estudiante1);
-        System.out.println(libro1);
-        System.out.println(estudiante1);
-
-        Prestamo prestamo2 = libro2.prestar(estudiante1);
-        System.out.println(estudiante1);
-
-
-        System.out.println(Libro.getLibrosDisponibles());
-        libro1.devolver(estudiante1);
-        System.out.println(libro1);
-        System.out.println(estudiante1);
-
-        System.out.println(Libro.getLibrosDisponibles());
-        libro1.devolver(estudiante1);
-        libro2.devolver(estudiante1);
-        System.out.println(estudiante1);
-
-
+        System.out.println(iesmutxamel);
     }
 
 
