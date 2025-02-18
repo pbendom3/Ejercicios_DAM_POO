@@ -1,6 +1,6 @@
 package org.example.herencia_festival;
 
-public class Organizador extends Persona {
+public class Organizador extends Persona implements Organizable{
 
     private String rol;
 
@@ -17,5 +17,10 @@ public class Organizador extends Persona {
     public void accederEvento(){
         System.out.println("Accediendo como Organizador: Coordinando el evento.");
     }
+
+    public void organizarEvento() {
+        System.out.println("Organizando el cotarro...");
+    }
+
 
 }
