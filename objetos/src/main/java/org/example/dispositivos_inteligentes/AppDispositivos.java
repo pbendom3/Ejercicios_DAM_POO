@@ -31,5 +31,55 @@ public class AppDispositivos {
             System.out.println("------------------------");
         }
 
+        Dispositivo proyector = new Dispositivo("Optoma") {
+            @Override
+            public void encender() {
+                if(getEstado()){
+                    System.out.println("El proyector ya está encendido.");
+                }else{
+                    System.out.println("Encendiendo proyector con ajuste automático de brillo...");
+                    setEstado(true);
+                }
+            }
+        };
+
+        ControlRemoto control_proyector = new ControlRemoto() {
+            @Override
+            public void sincronizar() {
+                System.out.println("Sincronizando proyector con control remoto de presentación...");
+            }
+        };
+
+        Dispositivo horno =  new Dispositivo("BALAY hot") {
+            @Override
+            public void encender() {
+                if(getEstado()){
+                    System.out.println("El horno ya está encendido");
+                }else{
+                    System.out.println("Calentando horno con ajuste automático de temperatura...");
+                    setEstado(true);
+                }
+            }
+        };
+
+        listaDispositivos.add(horno);
+        listaDispositivos.add(proyector);
+
+        for (Dispositivo dispositivo :listaDispositivos){
+
+            dispositivo.encender();
+
+            if(dispositivo instanceof ControlRemoto){
+                ((ControlRemoto) dispositivo).sincronizar();
+            } else if (dispositivo.getNombre().equals("Optoma")) {
+                control_proyector.sincronizar();
+            }
+
+            dispositivo.mostrarEstado();
+            dispositivo.apagar();
+
+            System.out.println("------------------------");
+        }
+
     }
 }

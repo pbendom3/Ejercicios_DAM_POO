@@ -29,5 +29,52 @@ public class AppPokedex {
             }
         }
 
+        System.out.println();
+
+        Pokemon jiglipuff = new Pokemon(25,30) {
+            @Override
+            public void atacar() {
+                System.out.println("NADA DE NADA");
+            }
+        };
+
+        jiglipuff.atacar();
+        jiglipuff.imprimirDatos();
+
+        AtaquesAgua ataques = new AtaquesAgua() {
+            @Override
+            public void hidroBomba() {
+                System.out.println("BOOOOOM");
+            }
+
+            @Override
+            public void surf() {
+                System.out.println("COGIENDO OLASSSSS");
+            }
+
+            @Override
+            public void pistolaAgua() {
+                System.out.println("FLUSH FLUSH");
+            }
+
+            @Override
+            public void salpicadura() {
+                System.out.println("SALPICADURAAAA");
+            }
+        };
+
+        ataques.hidroBomba();
+        ataques.pistolaAgua();
+
+        Electrico pikachu3 = new Electrico(35,12){
+            @Override
+            public void atacar(){
+                System.out.println("RAYOO");
+            }
+        };
+
+        pikachu3.atacar();
+
+
     }
 }
