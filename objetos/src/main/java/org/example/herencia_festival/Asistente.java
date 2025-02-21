@@ -1,9 +1,9 @@
 package org.example.herencia_festival;
 
 class Asistente extends Persona {
-    protected String entrada; //tipo de entrada (General, VIP, etc.)
+    protected TipoEntrada entrada; //tipo de entrada (General, VIP, etc.)
 
-    public Asistente(String nombre, int edad, String entrada) {
+    public Asistente(String nombre, int edad, TipoEntrada entrada) throws EdadMinimaException {
         super(nombre, edad); //llamamos al constructor de la clase Persona
         this.entrada = entrada;
     }
